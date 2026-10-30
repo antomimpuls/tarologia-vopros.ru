@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
-  'phoneNumber': '+79175880592',
-  'psychicName': 'Элеонора',
+  'phoneNumber': '+79036728688',
+  'psychicName': 'Нина',
   'city': 'Краснодар',
   'address': 'г. Москва, ул. Северная, д. 324, офис 45',
   'enableRedirect': false,
@@ -21,7 +21,7 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://tarologia-vopros.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'telegramEnabled': true,
-  'telegramNickname': 'Eleonora003',
+  'telegramNickname': 'NineMag7771',
   'yandexMetrikaId': '113326600',
   'psychicImageURL': 'https://tarologia-vopros.ru/photo-a3a73bb37f4b4d0ab995f61e31317fab.jpg',
   'workingHours': 'ежедневно 08:30-21:30',
@@ -30,7 +30,7 @@ const SITE_SETTINGS = {
   'maxEnabled': false,
   'maxUrl': ''
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Элеонора';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Нина';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
@@ -688,7 +688,7 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
 <div class="testimonial-header">
 <div class="avatar">Е</div>
 <div>
-<h4 style="margin:0 0 5px">Элеонора, 32 года, Екатеринбург</h4>
+<h4 style="margin:0 0 5px">Нина, 32 года, Екатеринбург</h4>
 <div class="stars">★★★★★</div>
 </div>
 </div>
@@ -1259,7 +1259,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Элеонора';
+    const psychicName = SETTINGS.psychicName || 'Нина';
     replaceNamePlaceholders(psychicName);
     const heroName = document.getElementById('heroName');
     if (heroName) {
