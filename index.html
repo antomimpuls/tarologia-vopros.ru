@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
-  'phoneNumber': '+79175880592',
-  'psychicName': 'Элеонора',
+  'phoneNumber': '+79036728688',
+  'psychicName': 'Нина',
   'city': 'Краснодар',
   'address': 'г. Москва, ул. Северная, д. 324, офис 45',
   'enableRedirect': false,
@@ -21,7 +21,7 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://tarologia-vopros.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'telegramEnabled': true,
-  'telegramNickname': 'Eleonora003',
+  'telegramNickname': 'NineMag7771',
   'yandexMetrikaId': '113326600',
   'psychicImageURL': 'https://tarologia-vopros.ru/photo-a3a73bb37f4b4d0ab995f61e31317fab.jpg',
   'workingHours': 'ежедневно 08:30-21:30',
@@ -30,16 +30,16 @@ const SITE_SETTINGS = {
   'maxEnabled': false,
   'maxUrl': ""
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Элеонора';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Нина';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
-const WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
-const FALLBACK_WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const WA_URL="https://wa.me/79036728688?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const FALLBACK_WA_URL="https://wa.me/79036728688?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
-const TELEGRAM_URL="https://t.me/Eleonora003?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const TELEGRAM_URL="https://t.me/NineMag7771?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9D%D0%B8%D0%BD%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 const SITE_STATS_TRACKER_CONFIG = {
     projectUrl: "https://stats.72-56-243-254.sslip.io",
@@ -516,13 +516,13 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
 .studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://tarologia-vopros.ru/photo-a3a73bb37f4b4d0ab995f61e31317fab.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
 .hero-img #psychicImage{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
 </style>
-<!-- CONVERSIA_CONTACT_CONTRACT_V1 a66f3e4d6a253a4c902cc37d1a2130252b120022d7e66dfa066add311cd28766 -->
+<!-- CONVERSIA_CONTACT_CONTRACT_V1 dc1923e495c0f49277450559ca49999b1e752f7b87f1aafb873f6cfb444fbc6e -->
 </head>
 <body>
 
 <div class="sticky-messengers" id="stickyMessengers">
-<a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
-<a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
+<a data-msg-url="https://wa.me/79036728688" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
+<a data-msg-url="https://t.me/NineMag7771" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
 </div>
 
 <section class="hero">
@@ -540,8 +540,8 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
 <div class="trust-item"><span style="font-size:1.5rem">📱</span><span style="font-size:0.85rem;font-weight:600">Оперативная связь и фотоотчёты</span></div>
         </div>
         <div class="hero-cta">
-        <a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
-        <a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
+        <a data-msg-url="https://wa.me/79036728688" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
+        <a data-msg-url="https://t.me/NineMag7771" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
         </div>
         </div>
         <div>
@@ -688,7 +688,7 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
 <div class="testimonial-header">
 <div class="avatar">Е</div>
 <div>
-<h4 style="margin:0 0 5px">Элеонора, 32 года, Екатеринбург</h4>
+<h4 style="margin:0 0 5px">Нина, 32 года, Екатеринбург</h4>
 <div class="stars">★★★★★</div>
 </div>
 </div>
@@ -947,7 +947,7 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
         <p>ОГРНИП: 325774600019856</p>
         <p>ИНН: 773401256734</p>
         <p>Адрес: 123112, г. Москва, Пресненская наб., д. 8, офис 1205</p>
-        <p>Телефон: +7 (917) 588-05-92</p>
+        <p>Телефон: +7 (903) 672-86-88</p>
         <p>Email: info@tarologia-vopros.ru</p>
         </div>
         <p style="font-size:0.9rem;color:#94a3b8;font-style:italic;margin-bottom:30px">Дата последнего обновления: 5 ноября 2025 года</p>
@@ -982,7 +982,7 @@ footer{background:#0b131a;padding:40px 0;text-align:center;border-top:1px solid 
 <p>Для этого напишите на контактный email, указанный ниже.</p>
         <h2>8. Данные для связи</h2>
         <div class="company-info">
-        <p>Телефон: <a href="tel:+79175880592" style="color:#14b8a6;text-decoration:none">+7 (917) 588-05-92</a></p>
+        <p>Телефон: <a href="tel:+79036728688" style="color:#14b8a6;text-decoration:none">+7 (903) 672-86-88</a></p>
         <p>Email: <a href="mailto:info@tarologia-vopros.ru" style="color:#14b8a6;text-decoration:none">info@tarologia-vopros.ru</a></p>
         <p>Сайт: <a href="https://tarologia-vopros.ru/" style="color:#14b8a6;text-decoration:none" target="_blank">https://tarologia-vopros.ru</a></p>
         </div>
@@ -1259,7 +1259,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Элеонора';
+    const psychicName = SETTINGS.psychicName || 'Нина';
     replaceNamePlaceholders(psychicName);
     const heroName = document.getElementById('heroName');
     if (heroName) {
